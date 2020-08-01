@@ -1,0 +1,80 @@
+﻿@page
+@model BookingClone.Pages.Users.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>GuestDetails</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="GuestDetails.Id" />
+            <div class="form-group">
+                <label asp-for="GuestDetails.FullName" class="control-label"></label>
+                <input asp-for="GuestDetails.FullName" class="form-control" />
+                <span asp-validation-for="GuestDetails.FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuestDetails.Address" class="control-label"></label>
+                <input asp-for="GuestDetails.Address" class="form-control" />
+                <span asp-validation-for="GuestDetails.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuestDetails.Email" class="control-label"></label>
+                <input asp-for="GuestDetails.Email" class="form-control" />
+                <span asp-validation-for="GuestDetails.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuestDetails.Gender" class="control-label"></label>
+                <input asp-for="GuestDetails.Gender" class="form-control" />
+                <span asp-validation-for="GuestDetails.Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuestDetails.DateOfBirth" class="control-label"></label>
+                <input asp-for="GuestDetails.DateOfBirth" class="form-control" />
+                <span asp-validation-for="GuestDetails.DateOfBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuestDetails.Nationality" class="control-label"></label>
+                <input asp-for="GuestDetails.Nationality" class="form-control" />
+                <span asp-validation-for="GuestDetails.Nationality" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuestDetails.ResidenceCountry" class="control-label"></label>
+                <input asp-for="GuestDetails.ResidenceCountry" class="form-control" />
+                <span asp-validation-for="GuestDetails.ResidenceCountry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuestDetails.MobileNumber" class="control-label"></label>
+                <input asp-for="GuestDetails.MobileNumber" class="form-control" />
+                <span asp-validation-for="GuestDetails.MobileNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuestDetails.TravelPurpose" class="control-label"></label>
+                <input asp-for="GuestDetails.TravelPurpose" class="form-control" />
+                <span asp-validation-for="GuestDetails.TravelPurpose" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuestDetails.IdentificationNumber" class="control-label"></label>
+                <input asp-for="GuestDetails.IdentificationNumber" class="form-control" />
+                <span asp-validation-for="GuestDetails.IdentificationNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

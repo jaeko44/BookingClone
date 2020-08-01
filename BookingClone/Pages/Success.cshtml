@@ -1,0 +1,17 @@
+﻿@page
+@model BookingClone.Pages.SuccessModel
+@{
+    ViewData["Title"] = "Success";
+}
+
+<div class="jumbotron text-center">
+    <h1 class="display-3">Thank You!</h1>
+    <p class="lead"><strong>A message has been delivered to our team</strong> We will get back to you shortly.</p>
+    <hr>
+    <p>
+        Having trouble? <a asp-page="./Index">Contact us from Home Page</a>
+    </p>
+    <p class="lead">
+        <a class="btn btn-primary btn-sm" asp-page="./Index" role="button">Continue to view other offerings</a>
+    </p>
+</div>

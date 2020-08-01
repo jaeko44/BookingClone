@@ -1,0 +1,307 @@
+﻿@page
+@model BookingClone.Pages.IndexModel
+@{
+    ViewData["Title"] = "Homepage";
+    Layout = "~/Pages/_Layout-home.cshtml";
+    bool imagePrinted = false;
+}
+
+<script>
+
+    var scrt_var = "any";
+    updateSearchValue() {
+        var searchEl = document.getElementById("search_input");
+        scrt_var = searchEl.value;
+        searchEl.onChange = function () {
+            scrt_var = searchEl.value;
+            console.log(scrt_var)
+        }   
+
+    }
+
+        
+</script>
+
+<div class="home">
+
+    <!-- Home Slider -->
+    <div class="home_slider_container">
+        <div class="owl-carousel owl-theme home_slider">
+
+            <!-- Slide -->
+            <div class="slide">
+                <div class="background_image" id="bg_01"></div>
+                <div class="home_container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-8 offset-xl-2">
+                                <div class="home_content text-center">
+                                    <div class="home_title"><h1>Search for your favourite destination</h1></div>
+                                    <div class="search_form_container">
+                                        <form asp-controller="/Listing" class="search_form" id="search_form">
+                                            <div class="d-flex flex-sm-row flex-column align-items-sm-start align-items-center justify-content-sm-between">
+                                                <input onchange="updateSearchValue()" id="search_input" type="text" class="search_input" placeholder="Search from location, hotel name, date, or any combination" required="required">
+                                                <a href="/Listing?search="> </a><button class="search_button">Search</button>
+                                                <a href="/Listing?search=all" onclick="'/Listing?search=\'+scrt_var;return false;">Link</a>
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide -->
+            <div class="slide">
+                <div class="background_image" id="bg_02"></div>
+                <div class="home_container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-8 offset-xl-2">
+                                <div class="home_content text-center">
+                                    <div class="home_title"><h1>Can't find what you're looking for?</h1></div>
+                                    <div class="search_form_container">
+                                        <form action="#" class="search_form" id="search_form">
+                                            <div class="d-flex flex-sm-row flex-column align-items-sm-start align-items-center justify-content-sm-between">
+                                                <input type="text" class="search_input" placeholder="Search from location, hotel name, date, or any combination" required="required">
+                                                <button class="search_button">Search</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Home Slider Dots -->
+
+        <div class="home_slider_dots">
+            <ul id="home_slider_custom_dots" class="home_slider_custom_dots">
+                <li class="home_slider_custom_dot active">01.</li>
+                <li class="home_slider_custom_dot">02.</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<!-- Categories -->
+
+<div class="categories">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="categories_container d-flex flex-md-row flex-column align-items-start justify-content-start">
+
+                    <!-- Category -->
+                    <div class="category text-center">
+                        <a href="listings.html">
+                            <div class="d-flex flex-md-column flex-row align-items-md-center align-items-md-start align-items-center justify-content-start">
+                                <div class="cat_icon"><img src="~/images/icon_2.svg" class="svg" alt="Hotels Booking International"></div>
+                                <div class="cat_title">Hotels</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Category -->
+                    <div class="category text-center">
+                        <a href="listings.html">
+                            <div class="d-flex flex-md-column flex-row align-items-md-center align-items-md-start align-items-center justify-content-start">
+                                <div class="cat_icon"><img src="~/images/icon_5.svg" class="svg" alt="Flights Booking International"></div>
+                                <div class="cat_title">Travel [ Coming Soon ]</div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Locations -->
+
+<div class="locations container_custom">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section_title text-center"><h1>Explore Hot Locations</h1></div>
+                <div class="locations_container d-flex flex-row align-items-start justify-content-between flex-wrap">
+
+                    <!-- Location -->
+                    <div class="location">
+                        <img src="~/images/location_1.jpg" alt="">
+                        <div class="location_title text-center"><div><a asp-page="/Listing" asp-route-search="AbuDhabi">Abu Dhabi<div>+</div></a></div></div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="location">
+                        <img src="~/images/location_2.jpg" alt="">
+                        <div class="location_title text-center"><div><a asp-page="/Listing" asp-route-search="Dubai">Dubai<div>+</div></a></div></div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="location">
+                        <img src="~/images/location_3.jpg" alt="">
+                        <div class="location_title text-center"><div><a asp-page="/Listing" asp-route-search="Fujairah">Fujairah<div>+</div></a></div></div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="location">
+                        <img src="~/images/location_4.jpg" alt="">
+                        <div class="location_title text-center"><div><a asp-page="/Listing" asp-route-search="Fujairah">Ras Al Khaimah<div>+</div></a></div></div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="location">
+                        <img src="~/images/location_5.jpg" alt="">
+                        <div class="location_title text-center"><div><a asp-page="/Listing" asp-route-search="Sharjah">Sharjah <div>+</div></a></div></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+
+    <div class="title1">View Special Offers</div>
+
+    <div class="title2">Here's a list of the latest deals to help you find the best stay possible.</div>
+
+    <div class="row">
+        @foreach (var item in Model.BookModel)
+    {
+        <div style="display: none">
+            @(imagePrinted = false)
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <div class="room-wrapper">
+                <div class="room-inner">
+                    <div class="room">
+                        <figure>
+                            @foreach (var image in item.ImagesUploaded)
+                        {
+                            if (imagePrinted == false)
+                            {
+                                <a asp-page="./Offerings/Details" asp-route-id="@item.Id" ><img class="card-img-top" src="~/Upload/@image.ImageName" alt="Card image cap"></a>
+
+                                <div style="display: none">
+                                    @(imagePrinted = true)
+                                </div>
+                        }
+
+                    }
+                            <figcaption>
+                                <div class="txt1">@Html.DisplayFor(modelItem => item.Destination)</div>
+                            </figcaption>
+                        </figure>
+                        <div class="caption">
+                            <div class="txt1">@Html.DisplayFor(modelItem => item.RoomType)</div>
+                            <div class="txt2">
+                                <div class="small-stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="txt3">
+                                @Html.DisplayFor(modelItem => item.SpecialComments)
+                            </div>
+                        </div>
+                        <div class="select-txt">
+                            <a asp-page="./Offerings/Details" asp-route-id="@item.Id"><span>@Html.DisplayFor(modelItem => item.HotelName)<i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                        </div>
+                        <div class="room-icons">
+                            <div class="room-ic room-ic-wifi">
+                                <i class="fa fa-wifi" aria-hidden="true"></i>
+                                <div class="txt1">FREE WIFI</div>
+                            </div>
+                            <div class="room-ic room-ic-person">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <div class="txt1">MAX<br>PERSON</div>
+                            </div>
+                            <div class="room-ic room-ic-breakfast">
+                                <i class="fa fa-coffee" aria-hidden="true"></i>
+                                <div class="txt1">BREAKFAST<br>INCLUDED</div>
+                            </div>
+                            <div class="room-ic room-ic-left">
+                                <div class="txt0">4</div>
+                                <div class="txt1">ROOMS LEFT</div>
+                            </div>
+                            <div class="room-ic room-ic-refund">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                                <div class="txt1">NO REFUND</div>
+                            </div>
+                            <div class="room-price">
+                                <div class="txt1">AED <span>@Html.DisplayFor(modelItem => item.NetRate)</span></div>
+                                <div class="txt2">@Html.DisplayFor(modelItem => item.TotalNights) Nights</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: none">
+            @(imagePrinted = false)
+        </div>
+}
+    </div>
+
+
+</div>
+
+<!-- Clients -->
+
+<div class="clients">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <!-- Clients Slider -->
+                <div class="clients_slider_container">
+                    <div class="owl-carousel owl-theme clients_slider">
+
+                        <!-- Slide -->
+                        <div class="slide">
+                            <div class="partner_0image"><a href="#"><img src="~/images/partner_01.png" alt=""></a></div>
+                        </div>
+
+                        <!-- Slide -->
+                        <div class="slide">
+                            <div class="partner_0image"><a href="#"><img src="~/images/partner_02.png" alt=""></a></div>
+                        </div>
+
+                        <!-- Slide -->
+                        <div class="slide">
+                            <div class="partner_0image"><a href="#"><img src="~/images/partner_03.png" alt=""></a></div>
+                        </div>
+
+                        <!-- Slide -->
+                        <div class="slide">
+                            <div class="partner_0image"><a href="#"><img src="~/images/partner_04.png" alt=""></a></div>
+                        </div>
+
+                        <!-- Slide -->
+                        <div class="slide">
+                            <div class="partner_0image"><a href="#"><img src="~/images/partner_05.png" alt=""></a></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

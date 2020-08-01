@@ -1,0 +1,85 @@
+﻿@page
+@model BookingClone.Pages.Users.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GuestDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.FullName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.FullName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.Gender)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.Gender)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.DateOfBirth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.DateOfBirth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.Nationality)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.Nationality)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.ResidenceCountry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.ResidenceCountry)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.MobileNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.MobileNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.TravelPurpose)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.TravelPurpose)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.IdentificationNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.IdentificationNumber)
+        </dd>
+        <dt>
+            Hotel Requested
+        </dt>
+        <dd>
+            <a asp-page="../Offerings/Details" asp-route-id="@Model.GuestDetails.BookingOfferId">View Hotel</a>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.GuestDetails.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

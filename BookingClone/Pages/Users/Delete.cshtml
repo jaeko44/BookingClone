@@ -1,0 +1,82 @@
+﻿@page
+@model BookingClone.Pages.Users.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>GuestDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.FullName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.FullName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.Gender)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.Gender)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.DateOfBirth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.DateOfBirth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.Nationality)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.Nationality)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.ResidenceCountry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.ResidenceCountry)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.MobileNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.MobileNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.TravelPurpose)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.TravelPurpose)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GuestDetails.IdentificationNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GuestDetails.IdentificationNumber)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="GuestDetails.Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

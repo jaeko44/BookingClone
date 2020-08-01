@@ -1,0 +1,100 @@
+﻿@page
+@model BookingClone.Pages.ListingModel
+@{
+    ViewData["Title"] = "Listing";
+    bool imagePrinted = false;
+
+}
+
+
+<h2>Listing</h2>
+<div class="container">
+
+    <div class="title1">View Special Offers for @Model.Category</div>
+
+    <div class="title2">Here's a list of all available offers in @Model.Category</div>
+
+    <div class="row">
+        @foreach (var item in Model.BookModel)
+        {
+            <div style="display: none">
+                @(imagePrinted = false)
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="room-wrapper">
+                    <div class="room-inner">
+                        <div class="room">
+                            <figure>
+                                @foreach (var image in item.ImagesUploaded)
+                                {
+                                    if (imagePrinted == false)
+                                    {
+                                        <a asp-page="./Offerings/Details" asp-route-id="@item.Id"><img class="card-img-top" src="~/Upload/@image.ImageName" alt="Card image cap"></a>
+
+                                        <div style="display: none">
+                                            @(imagePrinted = true)
+                                        </div>
+                                    }
+
+                                }
+                                <figcaption>
+                                    <div class="txt1">@Html.DisplayFor(modelItem => item.Destination)</div>
+                                </figcaption>
+                            </figure>
+                            <div class="caption">
+                                <div class="txt1">@Html.DisplayFor(modelItem => item.RoomType)</div>
+                                <div class="txt2">
+                                    <div class="small-stars">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="txt3">
+                                    @Html.DisplayFor(modelItem => item.SpecialComments)
+                                </div>
+                            </div>
+                            <div class="select-txt">
+                                <a asp-page="./Offerings/Details" asp-route-id="@item.Id"><span>@Html.DisplayFor(modelItem => item.HotelName)<i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                            </div>
+                            <div class="room-icons">
+                                <div class="room-ic room-ic-wifi">
+                                    <i class="fa fa-wifi" aria-hidden="true"></i>
+                                    <div class="txt1">FREE WIFI</div>
+                                </div>
+                                <div class="room-ic room-ic-person">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <div class="txt1">MAX<br>PERSON</div>
+                                </div>
+                                <div class="room-ic room-ic-breakfast">
+                                    <i class="fa fa-coffee" aria-hidden="true"></i>
+                                    <div class="txt1">BREAKFAST<br>INCLUDED</div>
+                                </div>
+                                <div class="room-ic room-ic-left">
+                                    <div class="txt0">4</div>
+                                    <div class="txt1">ROOMS LEFT</div>
+                                </div>
+                                <div class="room-ic room-ic-refund">
+                                    <i class="fa fa-tags" aria-hidden="true"></i>
+                                    <div class="txt1">NO REFUND</div>
+                                </div>
+                                <div class="room-price">
+                                    <div class="txt1">AED <span>@Html.DisplayFor(modelItem => item.NetRate)</span></div>
+                                    <div class="txt2">@Html.DisplayFor(modelItem => item.TotalNights) Nights</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="display: none">
+                @(imagePrinted = false)
+            </div>
+        }
+    </div>
+
+
+</div>

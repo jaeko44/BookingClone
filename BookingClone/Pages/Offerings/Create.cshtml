@@ -1,0 +1,143 @@
+﻿@page
+@model BookingClone.Pages.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+
+    <h2>Create</h2>
+
+    <h4>BookModel</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post" enctype="multipart/form-data" id="dropzoneForm">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="BookModel.CreationDate" class="control-label"></label>
+                    <input asp-for="BookModel.CreationDate" class="form-control" />
+                    <span asp-validation-for="BookModel.CreationDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.LeaderName" class="control-label"></label>
+                    <input asp-for="BookModel.LeaderName" class="form-control" />
+                    <span asp-validation-for="BookModel.LeaderName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.ReferenceNo" class="control-label"></label>
+                    <input asp-for="BookModel.ReferenceNo" class="form-control" />
+                    <span asp-validation-for="BookModel.ReferenceNo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.HotelAddress" class="control-label"></label>
+                    <input asp-for="BookModel.HotelAddress" class="form-control" />
+                    <span asp-validation-for="BookModel.HotelAddress" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.HotelName" class="control-label"></label>
+                    <input asp-for="BookModel.HotelName" class="form-control" />
+                    <span asp-validation-for="BookModel.HotelName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.ValidFrom" class="control-label"></label>
+                    <input asp-for="BookModel.ValidFrom" class="form-control" />
+                    <span asp-validation-for="BookModel.ValidFrom" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.ValidUntil" class="control-label"></label>
+                    <input asp-for="BookModel.ValidUntil" class="form-control" />
+                    <span asp-validation-for="BookModel.ValidUntil" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.TotalNights" class="control-label"></label>
+                    <input asp-for="BookModel.TotalNights" class="form-control" />
+                    <span asp-validation-for="BookModel.TotalNights" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.RoomType" class="control-label"></label>
+                    <input asp-for="BookModel.RoomType" class="form-control" />
+                    <span asp-validation-for="BookModel.RoomType" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.Meal" class="control-label"></label>
+                    <input asp-for="BookModel.Meal" class="form-control" />
+                    <span asp-validation-for="BookModel.Meal" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.TotalRooms" class="control-label"></label>
+                    <input asp-for="BookModel.TotalRooms" class="form-control" />
+                    <span asp-validation-for="BookModel.TotalRooms" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.SpecialComments" class="control-label"></label>
+                    <input asp-for="BookModel.SpecialComments" class="form-control" />
+                    <span asp-validation-for="BookModel.SpecialComments" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.Destination" class="control-label"></label>
+                    <input asp-for="BookModel.Destination" class="form-control" />
+                    <span asp-validation-for="BookModel.Destination" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.Destination" class="control-label"></label>
+                    <select asp-for="BookModel.Destination">
+                        <option value="AbuDhabi">Abu Dhabi</option>
+                        <option value="Dubai">Dubai</option>
+                        <option value="Fujairah">Fujairah</option>
+                        <option value="RasAlKhaimah">Ras Al Khaimah</option>
+                        <option value="Sharjah">Sharjah</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <span asp-validation-for="BookModel.Destination" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.NetRate" class="control-label"></label>
+                    <input asp-for="BookModel.NetRate" class="form-control" />
+                    <span asp-validation-for="BookModel.NetRate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.GrossRate" class="control-label"></label>
+                    <input asp-for="BookModel.GrossRate" class="form-control" />
+                    <span asp-validation-for="BookModel.GrossRate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.Discount" class="control-label"></label>
+                    <input asp-for="BookModel.Discount" class="form-control" />
+                    <span asp-validation-for="BookModel.Discount" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.MaximumAdults" class="control-label"></label>
+                    <input asp-for="BookModel.MaximumAdults" class="form-control" />
+                    <span asp-validation-for="BookModel.MaximumAdults" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.MaximumKids" class="control-label"></label>
+                    <input asp-for="BookModel.MaximumKids" class="form-control" />
+                    <span asp-validation-for="BookModel.MaximumKids" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BookModel.CancellationPolicy" class="control-label"></label>
+                    <input asp-for="BookModel.CancellationPolicy" class="form-control" />
+                    <span asp-validation-for="BookModel.CancellationPolicy" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Upload your Images: </label>
+                    <input name="files" type="file" multiple />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-page="Index">Back to List</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

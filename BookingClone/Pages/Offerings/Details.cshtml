@@ -1,0 +1,344 @@
+﻿@page
+@model BookingClone.Pages.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+
+}
+
+<div class="title1">HOTEL TITLE</div>
+
+<div class="title2">HOTEL SPECIAL COMMENTS</div>
+
+@*<div class="slider2-wrapper">
+    <div class="slider-for2 slick-initialized slick-slider">
+        <div class="slick-list draggable" style="height: 433.46px;">
+            <div class="slick-track" style="width: 7350px; opacity: 1;">
+                <div tabindex="-1" class="slider-item slick-slide" aria-hidden="true"
+                     style="transition:opacity 500ms; left: 0px; top: 0px; width: 735px; position: relative; z-index: 998; opacity: 0;"
+                     data-slick-index="0">
+                    <img class="img-fluid" alt="" src="images/gallery01.jpg">
+                </div>
+                <div tabindex="-1" class="slider-item slick-slide" aria-hidden="true"
+                     style="transition:opacity 500ms; left: -735px; top: 0px; width: 735px; position: relative; z-index: 998; opacity: 0;"
+                     data-slick-index="1">
+                    <img class="img-fluid" alt="" src="images/gallery02.jpg">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="slider-nav2 slick-initialized slick-slider slick-vertical">
+        <div class="slick-list draggable" style="height: 785px;">
+            <div class="slick-track"
+                 style="height: 3925px; opacity: 1; transform: translate3d(0px, -1413px, 0px);">
+                <div tabindex="-1" class="slider-item slick-slide slick-cloned" aria-hidden="true"
+                     style="width: 136px;" data-slick-index="-5">
+                    <div class="slider-item-inner">
+                        <img class="img-fluid" alt="" src="images/thumb06.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+
+<div class="details-wrapper clearfix">
+    <div class="txt1">
+        <div class="small-stars">
+            @{
+        for (int stars = 1; stars < Model.BookModel.Rating; stars = stars + 1)
+        {
+            <i class="fa fa-star"></i>
+
+
+}
+            }
+        </div>
+    </div>
+    <div class="txt2">
+        @Html.DisplayFor(model => model.BookModel.OfferingDescription)
+    </div>
+    <div class="txt3">
+        <p>
+            @Html.DisplayFor(model => model.BookModel.SpecialComments)
+
+        </p>
+    </div>
+    <div class="details-caption">
+        <div class="txt1">
+            @Html.DisplayFor(model => model.BookModel.LeaderName)
+        </div>
+        <div class="txt21">
+            @Html.DisplayFor(model => model.BookModel.RoomType)
+        </div>
+    </div>
+</div>
+
+<div class="details2-wrapper">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="our-rooms-icons">
+                <div class="our-rooms-icon">
+                    <figure><img class="img-fluid" alt="" src="~/images/ic14.png"></figure>
+                    <div class="our-rooms-icon-txt1">Car Parking Available</div>
+                    <div class="our-rooms-icon-txt2">INCLUDES</div>
+                </div>
+                <div class="our-rooms-icon">
+                    <figure><img class="img-fluid" alt="" src="~/images/ic12.png"></figure>
+                    <div class="our-rooms-icon-txt1">Breakfast</div>
+                    <div class="our-rooms-icon-txt2">INCLUDES</div>
+                </div>
+                <div class="our-rooms-icon">
+                    <figure><img class="img-fluid" alt="" src="~/images/ic13.png"></figure>
+                    <div class="our-rooms-icon-txt1">Transfer from Airport</div>
+                    <div class="our-rooms-icon-txt2">INCLUDES</div>
+                </div>
+                <div class="our-rooms-icon">
+                    <figure><img class="img-fluid" alt="" src="~/images/ic11.png"></figure>
+                    <div class="our-rooms-icon-txt1">Free WiFi AROUND the DELVATORE</div>
+                    <div class="our-rooms-icon-txt2">INCLUDES</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="our-rooms-icons">
+                <div class="our-rooms-icon">
+                    <figure><img class="img-fluid" alt="" src="~/images/ic15.png"></figure>
+                    <div class="our-rooms-icon-txt1">Security safe Available</div>
+                    <div class="our-rooms-icon-txt2">INCLUDES</div>
+                </div>
+                <div class="our-rooms-icon">
+                    <figure><img class="img-fluid" alt="" src="~/images/ic17.png"></figure>
+                    <div class="our-rooms-icon-txt1">Restaurant</div>
+                    <div class="our-rooms-icon-txt2">DOESN’T INCLUDE</div>
+                </div>
+                <div class="our-rooms-icon">
+                    <figure><img class="img-fluid" alt="" src="~/images/ic18.png"></figure>
+                    <div class="our-rooms-icon-txt1">Air Conditioning</div>
+                    <div class="our-rooms-icon-txt2">AVAILABLE</div>
+                </div>
+                <div class="our-rooms-icon">
+                    <figure><img class="img-fluid" alt="" src="~/images/ic16.png"></figure>
+                    <div class="our-rooms-icon-txt1">GRAND CASINO Hotel DELVATORE</div>
+                    <div class="our-rooms-icon-txt2">100$ FREE CHIPS INCLUDES</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="details2-info">
+                <div class="check1">AVAILABLE: <span>YES</span></div>
+                <div class="check1">DISCOUNT APPLIED: <span>@Html.DisplayFor(model => model.BookModel.Discount) </span></div>
+                <div>
+                    <a class="details2-link" href="#">
+                        <div class="txt1">@Html.DisplayFor(model => model.BookModel.NetRate) <span>TOTAL AED</span></div>
+                        <div class="txt2">RESERVE THIS ROOM</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="share-to-frends-wrapper clearfix">
+    <div class="share-to-friends clearfix">
+        <div class="share-to-friends-txt">Share to friends:</div>
+        <div class="share-to-friends-icons">
+            <ul class="social4 clearfix">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="blog-tags clearfix">
+        <div class="blog-tags-txt">Tags:</div>
+        <div class="blog-tags-tags">
+            <a href="#">Dubai</a>, <a href="#">Beach Front</a>, <a href="#">Hotel Name</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="row">
+    <div class="col-md-8">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group required">
+                <label asp-for="GuestDetails.FullName" class="control-label">Full Name</label>
+                <input asp-for="GuestDetails.FullName" class="form-control" />
+                <span asp-validation-for="GuestDetails.FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group required">
+                <label asp-for="GuestDetails.Address" class="control-label"></label>
+                <input asp-for="GuestDetails.Address" class="form-control" />
+                <span asp-validation-for="GuestDetails.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group required">
+                <label asp-for="GuestDetails.Email" class="control-label"></label>
+                <input asp-for="GuestDetails.Email" class="form-control" />
+                <span asp-validation-for="GuestDetails.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group required">
+                <label asp-for="GuestDetails.MobileNumber" class="control-label">Mobile Number</label>
+                <input asp-for="GuestDetails.MobileNumber" class="form-control" />
+                <span asp-validation-for="GuestDetails.MobileNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuestDetails.Gender" class="control-label"></label>
+                <select asp-for="GuestDetails.Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <span asp-validation-for="GuestDetails.Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuestDetails.DateOfBirth" class="control-label">Date of Birth</label>
+                <input asp-for="GuestDetails.DateOfBirth" class="form-control" />
+                <span asp-validation-for="GuestDetails.DateOfBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuestDetails.Nationality" class="control-label"></label>
+                <input asp-for="GuestDetails.Nationality" class="form-control" />
+                <span asp-validation-for="GuestDetails.Nationality" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuestDetails.ResidenceCountry" class="control-label">Residence Country</label>
+                <input asp-for="GuestDetails.ResidenceCountry" class="form-control" />
+                <span asp-validation-for="GuestDetails.ResidenceCountry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuestDetails.TravelPurpose" class="control-label">Travel Purpose</label>
+                <input asp-for="GuestDetails.TravelPurpose" class="form-control" />
+                <span asp-validation-for="GuestDetails.TravelPurpose" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuestDetails.IdentificationNumber" class="control-label">Identification Number</label>
+                <input asp-for="GuestDetails.IdentificationNumber" class="form-control" />
+                <span asp-validation-for="GuestDetails.IdentificationNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Send Request" class="btn btn-secondary btn-lg btn-block" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <h4>Hotel Information</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Preview
+            </dt>
+            <dd>
+                <tr>
+
+                    @foreach (var item in Model.BookModel.ImagesUploaded)
+                    {
+                        <td>
+                            <img class="card-img-top" src="~/Upload/@item.ImageName" alt="Card image cap">
+                        </td>
+                    }
+                </tr>
+
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.CreationDate)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.CreationDate)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.LeaderName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.LeaderName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.ReferenceNo)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.ReferenceNo)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.HotelName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.HotelName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.ValidFrom)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.ValidFrom)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.ValidUntil)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.ValidUntil)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.TotalNights)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.TotalNights)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.RoomType)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.RoomType)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.Meal)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.Meal)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.TotalRooms)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.TotalRooms)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.SpecialComments)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.SpecialComments)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.Destination)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.Destination)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.NetRate)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.NetRate) AED
+            </dd>
+            <dt>
+                Cancellation Policy
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.CancellationPolicy)
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<div>
+    <a asp-page="/Index">Back to Homepage</a>
+</div>
+

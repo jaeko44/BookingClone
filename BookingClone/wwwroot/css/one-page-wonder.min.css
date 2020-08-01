@@ -1,0 +1,240 @@
+/*!
+ * Start Bootstrap - One Page Wonder v5.0.8 (https://startbootstrap.com/template-overviews/one-page-wonder)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-one-page-wonder/blob/master/LICENSE)
+ */
+
+body {
+    font-family: Lato
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Catamaran;
+    font-weight: 800 !important
+}
+
+.btn-xl {
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: .1rem
+}
+
+.bg-black {
+    background-color: #000 !important
+}
+
+.rounded-pill {
+    border-radius: 5rem
+}
+
+.navbar-custom {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgb(58 35 110);
+}
+
+    .navbar-custom .navbar-brand {
+        text-transform: uppercase;
+        font-size: 1rem;
+        letter-spacing: .1rem;
+        font-weight: 700
+    }
+
+    .navbar-custom .navbar-nav .nav-item .nav-link {
+        text-transform: uppercase;
+        font-size: .8rem;
+        font-weight: 700;
+        letter-spacing: .1rem
+    }
+
+header.masthead {
+    position: relative;
+    overflow: hidden;
+    padding-top: calc(7rem + 72px);
+    padding-bottom: 7rem;
+    background: linear-gradient(0deg,#202060 0,#602080 100%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+    header.masthead .masthead-content {
+        z-index: 1;
+        position: relative
+    }
+
+        header.masthead .masthead-content .masthead-heading {
+            font-size: 4rem
+        }
+
+        header.masthead .masthead-content .masthead-subheading {
+            font-size: 2rem
+        }
+
+    header.masthead .bg-circle {
+        z-index: 0;
+        position: absolute;
+        border-radius: 100%;
+        background: linear-gradient(0deg,#b030b0 0,#202060 100%);
+    }
+
+    header.masthead .bg-circle-1 {
+        height: 90rem;
+        width: 90rem;
+        bottom: -55rem;
+        left: -55rem
+    }
+
+    header.masthead .bg-circle-2 {
+        height: 50rem;
+        width: 50rem;
+        top: -25rem;
+        right: -25rem
+    }
+
+    header.masthead .bg-circle-3 {
+        height: 20rem;
+        width: 20rem;
+        bottom: -10rem;
+        right: 5%
+    }
+
+    header.masthead .bg-circle-4 {
+        height: 30rem;
+        width: 30rem;
+        top: -5rem;
+        right: 35%
+    }
+
+@media (min-width:992px) {
+    header.masthead {
+        padding-top: calc(10rem + 55px);
+        padding-bottom: 10rem
+    }
+
+        header.masthead .masthead-content .masthead-heading {
+            font-size: 6rem
+        }
+
+        header.masthead .masthead-content .masthead-subheading {
+            font-size: 4rem
+        }
+}
+
+.bg-primary {
+    background-color: #ee0979 !important
+}
+
+.btn-primary {
+    background-color: #ee0979;
+    border-color: #ee0979
+}
+
+    .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+        background-color: #bd0760 !important;
+        border-color: #bd0760 !important
+    }
+
+    .btn-primary:focus {
+        box-shadow: 0 0 0 .2rem rgba(238,9,121,.5)
+    }
+
+.btn-secondary {
+    background-color: #ff6a00;
+    border-color: #ff6a00
+}
+
+    .btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
+        background-color: #c50 !important;
+        border-color: #c50 !important
+    }
+
+    .btn-secondary:focus {
+        box-shadow: 0 0 0 .2rem rgba(255,106,0,.5)
+    }
+
+
+.mt-50 {
+    margin-top: 50px !important;
+}
+
+.list-group-flush > .list-group-item {
+    /* border-width: 0 0 1px; */
+    border: 1px solid rgba(0,0,0,.125) !important;
+}
+
+li.nav-item {
+    padding-right: 20px;
+}
+
+.form-group.required .control-label:after {
+    content: "*";
+    color: red;
+}
+
+.nav-item a {
+    color: white;
+    padding: 15px;
+    background-color: #602080;
+}
+
+    .nav-item a:hover, .nav-item a:active {
+        color: #ffffffa6;
+        text-decoration: none;
+        background-color: #212529;
+        padding: 15px;
+    }
+
+.bg-purple {
+    background-color: #3a236e !important;
+}
+
+body {
+    padding-bottom: 0px;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}
+
+.btn-secondary {
+    color: #fff !important;
+    background-color: #212061 !important;
+    border-color: #6c757d !important;
+}
+
+    .btn-secondary:hover {
+        background-color: #972da2 !important;
+        border-color: #212061 !important;
+    }
+
+
+.btn-primary {
+    color: #fff !important;
+    background-color: #3a236e !important;
+    border-color: #212529 !important;
+}
+
+    .btn-primary:hover {
+        background-color: #972da2 !important;
+        border-color: #212061 !important;
+
+    }
+
+
+
+
+    .dropzone,.dropzone *{box-sizing:border-box}.dropzone{position:relative}.dropzone .dz-preview{position:relative;display:inline-block;width:120px;margin:0.5em}.dropzone .dz-preview .dz-progress{display:block;height:15px;border:1px solid #aaa}.dropzone .dz-preview .dz-progress .dz-upload{display:block;height:100%;width:0;background:green}.dropzone .dz-preview .dz-error-message{color:red;display:none}.dropzone .dz-preview.dz-error .dz-error-message,.dropzone .dz-preview.dz-error .dz-error-mark{display:block}.dropzone .dz-preview.dz-success .dz-success-mark{display:block}.dropzone .dz-preview .dz-error-mark,.dropzone .dz-preview .dz-success-mark{position:absolute;display:none;left:30px;top:30px;width:54px;height:58px;left:50%;margin-left:-27px}
+

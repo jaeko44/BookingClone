@@ -1,0 +1,116 @@
+﻿@page
+@model BookingClone.Pages.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container">
+
+    <h2>Delete</h2>
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>BookModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.CreationDate)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.CreationDate)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.LeaderName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.LeaderName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.ReferenceNo)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.ReferenceNo)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.HotelAddress)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.HotelAddress)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.HotelName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.HotelName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.ValidFrom)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.ValidFrom)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.ValidUntil)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.ValidUntil)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.TotalNights)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.TotalNights)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.RoomType)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.RoomType)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.Meal)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.Meal)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.TotalRooms)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.TotalRooms)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.SpecialComments)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.SpecialComments)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.Destination)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.Destination)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.NetRate)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.NetRate)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BookModel.CancellationPolicy)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BookModel.CancellationPolicy)
+            </dd>
+        </dl>
+
+        <form method="post">
+            <input type="hidden" asp-for="BookModel.Id" />
+            <input type="submit" class="btn btn-block" value="Delete" /> |
+            <a asp-page="./Index">Back to List</a>
+        </form>
+    </div>
+
+</div>
